@@ -12,7 +12,7 @@
 
 
 
-\usepackage{fontawesome}
+
 
 
 \AtBeginSubsection[]{}
@@ -45,11 +45,12 @@
 
 \newcommand{\cmark}{\textcolor{green}{\ding{51}}}%
 \newcommand{\xmark}{\textcolor{red}{\ding{55}}}%
+\newcommand{\smark}{\textcolor{orange}{\ding{43}}}%
 
 
 \RequirePackage[export]{adjustbox}
 \RequirePackage[mode=buildnew,subpreambles=true]{standalone}
-\usepackage{textpos,eso-pic}
+\RequirePackage{textpos,eso-pic}
 
 
 
@@ -83,6 +84,7 @@
 	\ifHandout
 
 	\else
+	\setcounter{tocdepth}{1}
 	\addtocounter{framenumber}{-1}
  	\begin{frame}{Outline}
   		%\tableofcontents[currentsection,currentsubsection]
@@ -95,6 +97,7 @@
 	\ifHandout
 
 	\else
+	\setcounter{tocdepth}{2}
 	\addtocounter{framenumber}{-1}
  	\begin{frame}[t]{Outline}
   		\tableofcontents[currentsection,currentsubsection]
