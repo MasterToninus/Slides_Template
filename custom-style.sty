@@ -42,16 +42,22 @@
 \RequirePackage[cal=boondox,scr=boondoxo]{mathalfa}
 % use mathscr for the v denoting hamiltonian vector fields. Avoid confusion with the infinitesimal action v!
 
-
-\newcommand{\cmark}{\textcolor{green}{\ding{51}}}%
-\newcommand{\xmark}{\textcolor{red}{\ding{55}}}%
-\newcommand{\smark}{\textcolor{orange}{\ding{43}}}%
+\RequirePackage{stmaryrd}
+\RequirePackage{fontawesome}
 
 
 \RequirePackage[export]{adjustbox}
 \RequirePackage[mode=buildnew,subpreambles=true]{standalone}
 \RequirePackage{textpos,eso-pic}
 
+
+%- Macros - Command --------------------------------------------------------------------------------------------------------------
+\providecommand{\cmark}{\textcolor{green}{\ding{51}}}%
+\providecommand{\xmark}{\textcolor{red}{\ding{55}}}%
+\providecommand{\smark}{\textcolor{orange}{\ding{43}}}%
+\providecommand{\vHam}{\mathscr{v}}
+\providecommand{\vAct}{v}
+\providecommand{\action}{\curvearrowright}
 
 
 
@@ -84,7 +90,7 @@
 	\ifHandout
 
 	\else
-	\setcounter{tocdepth}{1}
+	\setcounter{tocdepth}{2}
 	\addtocounter{framenumber}{-1}
  	\begin{frame}{Outline}
   		%\tableofcontents[currentsection,currentsubsection]
