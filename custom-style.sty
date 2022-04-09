@@ -1,3 +1,8 @@
+%+----------------------------------------------------------------------------+
+%| Style file: Style macros and packages 
+%+----------------------------------------------------------------------------+
+
+
 \NeedsTeXFormat{LaTeX2e}[2009/09/24]
 \ProvidesPackage{custom-style}[11/13/2019 Custom Package]
 
@@ -12,7 +17,7 @@
 
 
 
-\usepackage{fontawesome}
+
 
 
 \AtBeginSubsection[]{}
@@ -42,15 +47,19 @@
 \RequirePackage[cal=boondox,scr=boondoxo]{mathalfa}
 % use mathscr for the v denoting hamiltonian vector fields. Avoid confusion with the infinitesimal action v!
 
-
-\newcommand{\cmark}{\textcolor{green}{\ding{51}}}%
-\newcommand{\xmark}{\textcolor{red}{\ding{55}}}%
+\RequirePackage{stmaryrd}
+\RequirePackage{fontawesome}
 
 
 \RequirePackage[export]{adjustbox}
 \RequirePackage[mode=buildnew,subpreambles=true]{standalone}
-\usepackage{textpos,eso-pic}
+\RequirePackage{textpos,eso-pic}
 
+
+%- Macros - Command --------------------------------------------------------------------------------------------------------------
+\providecommand{\cmark}{\textcolor{green}{\ding{51}}}%
+\providecommand{\xmark}{\textcolor{red}{\ding{55}}}%
+\providecommand{\smark}{\textcolor{orange}{\ding{43}}}%
 
 
 
@@ -81,8 +90,13 @@
 %Intermediate checkpoint slide
 \newcommand{\checkpoint}[0]{
 	\ifHandout
-
+ 	\begin{frame}{Outline}
+  		%\tableofcontents[currentsection,currentsubsection]
+  		\tableofcontents[currentsection]
+	\end{frame}
+	\note{}
 	\else
+	\setcounter{tocdepth}{2}
 	\addtocounter{framenumber}{-1}
  	\begin{frame}{Outline}
   		%\tableofcontents[currentsection,currentsubsection]
@@ -95,6 +109,7 @@
 	\ifHandout
 
 	\else
+	\setcounter{tocdepth}{2}
 	\addtocounter{framenumber}{-1}
  	\begin{frame}[t]{Outline}
   		\tableofcontents[currentsection,currentsubsection]

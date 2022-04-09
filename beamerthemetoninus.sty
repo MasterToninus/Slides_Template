@@ -23,6 +23,10 @@
 	sidebar width left=0em, sidebar width right=0em
 } 
 
+%--  Toc -----------------------------------------------------------------------------------------------
+\setbeamertemplate{section in toc}[square]
+\setbeamertemplate{subsection in toc}[ball unnumbered]
+
 
 %-- Sections ----------------
 %\AtBeginSection[]
@@ -64,6 +68,26 @@
 	arc=15pt,
 	title={Prop: \strut#1}
 }
+
+\newtcolorbox{defpropblock}[1][]{
+	enhanced,breakable,
+	colback=white,
+	colbacktitle=white,
+	coltitle=red!70!black,
+	colframe=red!70!black,
+	%boxrule=1pt,
+	titlerule=0pt,
+	%arc=15pt,
+	borderline={0.5mm}{0mm}{red!70!black},
+	borderline={0.5mm}{0mm}{blue!70!black,dashed},		
+	left skip=0em, right skip=0em,
+	%enlarge left by=-1em,width=\linewidth+1.5em, %box horizontal size
+	left=0em,right=0em,top=0em,bottom=0em, %text spacing
+	toptitle=-0.2em,bottomtitle=-0.2em, %title spacing
+	title={Def/Prop: \strut#1}
+}
+
+
 
 \newtcolorbox{thmblock}[1][]{
 	colback=white,
