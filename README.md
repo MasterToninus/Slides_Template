@@ -30,9 +30,10 @@ The slides are designed with a <style: minimal/classical/animated/etc.> Beamer l
 ## Structure
 
 - `main.tex`: Main LaTeX file to compile the slides  
-- `figures/`: Directory for figures and diagrams  
-- `references.bib`: (If applicable) Bibliography file  
-- `style/`: (Optional) Custom style files or macros  
+- `Pictures/`: Directory for figures and diagrams  
+- `bibfile.bib`: (If applicable) Bibliography file  
+- `math.sty`: Custom style file with Math macros
+- `custom-style.sty`: Custom style file with all required packaged (to comply with the multifile format)
 
 ---
 
@@ -62,9 +63,8 @@ Feel free to open issues or submit PRs if you'd like to contribute!
 ---
 
 ## License
-
-\<Specify license, e.g., MIT, CC-BY, etc.>
-© <Your Name>, <Year>
+GNU General Public License v3.0.
+© Antonio Miti, 2025
 
 ---
 
